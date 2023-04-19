@@ -46,7 +46,6 @@ private fun setCustomMapIcon(message: String): BitmapDescriptor {
     val width = paintTextWhite.measureText(message, 0, message.length) + widthPadding
     val roundStart = height/3
     val path = Path().apply {
-        moveTo(roundStart, 0f)
         arcTo(0f, 0f,
             roundStart * 2, roundStart * 2,
             -90f, -180f, true)
