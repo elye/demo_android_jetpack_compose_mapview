@@ -29,18 +29,19 @@ fun GoogleMapCompose() {
             state = MarkerState(position = johorBahru),
             title = "Johor Bahru",
             snippet = "Marker in Johor Bahru",
-            icon = setCustomMapIcon("Asam Laksa Pedas", 150f)
+            icon = setCustomMapIcon("Asam Laksa Pedas")
         )
         Marker(
             state = MarkerState(position = singapore),
             title = "Singapore",
             snippet = "Marker in Singapore",
-            icon = setCustomMapIcon("Chilli Crab", 150f)
+            icon = setCustomMapIcon("Chilli Crab")
         )
     }
 }
 
-private fun setCustomMapIcon(message: String, height: Float): BitmapDescriptor {
+private fun setCustomMapIcon(message: String): BitmapDescriptor {
+    val height = 150f
     val widthPadding = 80.dp.value
     val width = paintTextWhite.measureText(message, 0, message.length) + widthPadding
     val roundStart = height/3
